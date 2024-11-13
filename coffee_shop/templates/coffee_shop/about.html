@@ -1,0 +1,20 @@
+{% extends 'coffee_shop/_base.html' %}
+{% load static %}
+{% block content %}
+<div class="container my-5">
+  <h1 class="text-center mb-5 speech-enabled">About Bean & Brew</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <p class="spech-enabled">{{ history }}</p>
+    </div>
+    <div class="col-md-6">
+      <h3 class="speech-anabled">Our Values</h3>
+      <ul>
+        {% for value in values %}
+        <li class="speech-enabled">{{ value }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

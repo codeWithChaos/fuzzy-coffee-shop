@@ -1,0 +1,23 @@
+{% extends 'coffee_shop/_base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h1 class="display-4 speech-enabled">Welcome to Bean & Brew</h1>
+      <p class="lead speech-enabled">
+        Experience the finest coffee selections from around the world.
+      </p>
+      <a href="{% url 'menu' %}" class="btn btn-coffee btn-lg mt-3"
+        >Explore Our Menu
+      </a>
+    </div>
+    <div class="col-md-6">
+      <img
+        src="{% static 'coffee_shop/img/hero.jpg' %}"
+        alt="Coffee cup"
+        class="img-fluid rounded" />
+    </div>
+  </div>
+</div>
+{% endblock %}

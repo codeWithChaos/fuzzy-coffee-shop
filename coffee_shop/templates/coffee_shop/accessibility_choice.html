@@ -1,0 +1,25 @@
+{% extends 'coffee_shop/_base.html' %}
+{% load static %}
+{% block content %}
+<div
+  class="container min-vh-100 d-flex align-items-center justify-content-center">
+  <div class="card shadow-lg p-5">
+    <h1 class="text-center mb-4">Welcome to Bean & Brew</h1>
+    <p class="text-center mb-4">
+      Would you like to enable screen reading feature?
+    </p>
+    <form
+      action="{% url 'set_accessibility' %}"
+      method="post"
+      class="d-flex justify-content-center gap-3">
+      {% csrf_token %}
+      <button type="submit" name="mode" value="true" class="btn btn-coffee">
+        Yes, enable screen reading
+      </button>
+      <button type="submit" name="mode" value="false" class="btn btn-coffee">
+        No, thank you
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}
